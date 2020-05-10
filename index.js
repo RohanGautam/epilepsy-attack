@@ -48,7 +48,7 @@ function fabClick() {
 
     if (controls.style.display === "none") {
         controls.style.display = "block";
-        originalParent.style.top = "4em";
+        originalParent.style.top = "5em";
     } else {
         controls.style.display = "none";
         originalParent.style.top = "0";
