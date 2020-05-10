@@ -5,15 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebCeption</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script defer src="index.js"></script>
 </head>
 
 <body>
-    <div class="iframe-container">
-        <iframe allowfullscreen src="index.html?q=<?php echo (isset($_GET['q'])?$_GET['q']:1)+1?>"></iframe>
+    <div>
+        <div id="controlDiv" class="control">
+            <!-- <input type="range" min="1" max="60" value="2" class="slider" id="changeDepth"> -->
+
+            <form action="#">
+                <p class="range-field">
+                    <input type="range" min="0" max="100" id="changeDepth" style="margin-bottom: 0px;"/>
+                </p>
+            </form>
+        </div>
+        <div id="colorDivParent" class="colorDiv"></div>
     </div>
+    <!-- <input type="range" min="1" max="60" value="2" class="slider" id="changeDepth" /> -->
+
+
+    <div class="fixed-action-btn" id="fab">
+        <a class="btn-floating grey">
+            <i class="large material-icons">settings</i>
+        </a>
+    </div>
+
 </body>
 
 </html>
